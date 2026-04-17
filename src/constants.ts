@@ -14,7 +14,7 @@ export const NAV_LINKS = [
 
 export const PERSONAL_INFO = {
   name: "Mansi Rajawat",
-  role: "Digital Marketing Manager | Meta Ads Expert | Content Creator",
+  role: "Social Media Executive | Meta Ads Executive | Digital Marketing Manager | Content Creator (YouTube)",
   description: "Results-driven digital marketer specializing in Meta Ads, lead generation, and social media growth. I help brands scale with data-driven strategies and creative campaigns.",
   about: "M.Com graduate and experienced Digital Marketing Professional with expertise in social media management, Meta Ads, and content creation. Proven ability to generate leads, increase engagement, and optimize campaigns for business growth.",
   location: "Sawai Madhopur, Rajasthan",
