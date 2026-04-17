@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="py-20 bg-black border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-16 mb-16">
+        <div className="grid md:grid-cols-2 gap-16 mb-16 max-w-4xl">
           {/* Logo & Info */}
           <div className="space-y-6">
             <h2 className="text-3xl font-display font-bold gradient-text">MANSI.</h2>
@@ -60,22 +60,6 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-
-          {/* Newsletter/Contact Mini */}
-          <div className="space-y-6">
-            <h4 className="font-bold uppercase tracking-widest text-xs text-accent-yellow">Stay Connected</h4>
-            <p className="text-sm text-gray-500">Subscribe for insights on Meta Ads and digital growth.</p>
-            <div className="relative">
-              <input 
-                type="email" 
-                placeholder="Email address"
-                className="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-accent-blue/50"
-              />
-              <button className="absolute right-2 top-2 p-1.5 bg-accent-blue rounded-lg text-white">
-                <Send size={16} />
-              </button>
             </div>
           </div>
         </div>
