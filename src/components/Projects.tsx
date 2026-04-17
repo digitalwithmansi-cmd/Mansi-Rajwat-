@@ -5,7 +5,7 @@
 
 import { motion } from 'motion/react';
 import { PROJECTS } from '../constants';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ArrowUpRight } from 'lucide-react';
 
 export default function Projects() {
   return (
@@ -16,7 +16,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
             My <span className="text-cyan-glow">Work</span>
@@ -24,11 +24,11 @@ export default function Projects() {
           <p className="text-lg text-gray-400 font-medium">
             Real Projects & Live Website Showcase
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent-blue to-purple-500 mx-auto mt-6 rounded-full blur-[1px] shadow-[0_0_10px_rgba(0,102,255,0.5)]" />
+          <div className="w-24 h-1 bg-cyan-glow mx-auto mt-6 rounded-full blur-[1px] shadow-[0_0_10px_#00E5FF]" />
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        {/* Projects Grid - More compact */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {PROJECTS.map((project, i) => (
             <motion.div
               key={i}
@@ -37,36 +37,35 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
               whileHover={{ 
-                scale: 1.02,
+                y: -8,
                 transition: { duration: 0.3 }
               }}
-              className="group relative bg-[#111111] rounded-[18px] border border-white/5 overflow-hidden shadow-[0_4px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,102,255,0.15)] hover:border-accent-blue/30 transition-all duration-500"
+              className="group relative bg-[#151515] rounded-[24px] border border-white/5 overflow-hidden shadow-2xl hover:shadow-[0_0_40px_rgba(0,229,255,0.1)] hover:border-cyan-glow/30 transition-all duration-500"
             >
-              {/* Category Badge */}
-              <div className="absolute top-6 left-6 z-20">
-                <span className="px-4 py-1.5 glass rounded-full text-xs font-bold text-accent-yellow border border-accent-yellow/30 tracking-wider uppercase">
+              {/* Category Badge - Sleeker */}
+              <div className="absolute top-4 left-4 z-20">
+                <span className="px-3 py-1 bg-white/5 backdrop-blur-md rounded-lg text-[10px] font-bold text-cyan-glow border border-cyan-glow/20 tracking-widest uppercase">
                   {(project as any).category}
                 </span>
               </div>
 
-              {/* Website Preview */}
-              <div className="relative h-64 md:h-72 overflow-hidden">
+              {/* Website Preview - Compact Height */}
+              <div className="relative h-56 overflow-hidden">
                 <img 
                   src={(project as any).image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                {/* Overlay Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/20 to-transparent transition-opacity duration-500 group-hover:opacity-40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-transparent opacity-60" />
               </div>
 
-              {/* Card Content */}
-              <div className="p-8 md:p-10">
-                <h3 className="text-2xl font-display font-bold mb-4 text-white group-hover:text-accent-blue transition-colors duration-300">
+              {/* Card Content - Compact padding */}
+              <div className="p-6 md:p-8">
+                <h3 className="text-xl font-display font-bold mb-3 text-white group-hover:text-cyan-glow transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed mb-8 line-clamp-3">
+                <p className="text-sm text-gray-400 leading-relaxed mb-6 line-clamp-2">
                   {project.description}
                 </p>
                 
@@ -74,11 +73,11 @@ export default function Projects() {
                   href={(project as any).link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent-yellow text-black font-extrabold rounded-full shadow-[0_4px_15px_rgba(255,214,0,0.3)] hover:shadow-[0_0_25px_rgba(255,214,0,0.6)] transition-all duration-300"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-[#1A1A1A] hover:bg-cyan-glow text-gray-300 hover:text-black font-bold rounded-xl border border-white/10 hover:border-transparent transition-all duration-300"
                 >
-                  View Live Website <ExternalLink size={18} />
+                  View Live Website <ExternalLink size={16} />
                 </motion.a>
               </div>
             </motion.div>
@@ -88,8 +87,8 @@ export default function Projects() {
 
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
-        <div className="absolute top-1/4 right-[10%] w-96 h-96 bg-accent-blue/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 left-[10%] w-96 h-96 bg-purple-500/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 right-[5%] w-72 h-72 bg-cyan-glow/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 left-[5%] w-72 h-72 bg-accent-blue/5 rounded-full blur-[100px]" />
       </div>
     </section>
   );

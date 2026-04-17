@@ -73,14 +73,14 @@ export const PROJECTS = [
     category: "E-Commerce Website",
     link: "https://parl.free.nf/?i=1",
     description: "A responsive e-commerce website designed with modern UI/UX principles. Includes product display sections, user-friendly navigation, and optimized layout for better customer experience and conversions.",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "Online Education Platform",
     category: "Education Website",
     link: "https://manu.free.nf/?i=1",
     description: "An interactive education website designed to deliver learning content effectively. Features structured sections, user-friendly design, and clean layout for better engagement and usability.",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=800",
   },
 ];
 
