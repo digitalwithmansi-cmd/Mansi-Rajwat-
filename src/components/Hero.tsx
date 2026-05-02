@@ -15,8 +15,39 @@ export default function Hero() {
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <div>
+        {/* Left Content - Single Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative group order-2 md:order-1"
+        >
+          <div className="relative z-10 rounded-[2rem] overflow-hidden border-2 border-white/10 shadow-2xl transition-all duration-500 group-hover:border-cyan-glow/50 group-hover:shadow-[0_0_50px_rgba(0,229,255,0.2)] bg-[#111]">
+            <img 
+              src="https://img.sanishtech.com/u/e9deb26a46dac6ff92c5c3615afbd335.png" 
+              alt={PERSONAL_INFO.name} 
+              className="w-full aspect-[4/5] object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-700"
+              referrerPolicy="no-referrer"
+              loading="lazy"
+              onError={(e) => {
+                // Fallback to a high-quality stock photo if the provided URL fails
+                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
+              }}
+            />
+            {/* Inner Glow Overlay */}
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
+          </div>
+          
+          {/* Decorative Elements - Refined */}
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-cyan-glow/10 rounded-full blur-[80px] -z-10 animate-pulse" />
+          <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-accent-blue/10 rounded-full blur-[100px] -z-10" />
+          
+          {/* Animated Ring */}
+          <div className="absolute inset-0 -m-4 border border-cyan-glow/20 rounded-[2.5rem] -z-10 group-hover:scale-110 transition-transform duration-700" />
+        </motion.div>
+
+        {/* Right Content - Text Content */}
+        <div className="order-1 md:order-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,37 +86,6 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
-
-        {/* Right Content - Single Profile Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative group"
-        >
-          <div className="relative z-10 rounded-[2rem] overflow-hidden border-2 border-white/10 shadow-2xl transition-all duration-500 group-hover:border-cyan-glow/50 group-hover:shadow-[0_0_50px_rgba(0,229,255,0.2)] bg-[#111]">
-            <img 
-              src="https://img.sanishtech.com/u/e9deb26a46dac6ff92c5c3615afbd335.png" 
-              alt={PERSONAL_INFO.name} 
-              className="w-full aspect-[4/5] object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-700"
-              referrerPolicy="no-referrer"
-              loading="lazy"
-              onError={(e) => {
-                // Fallback to a high-quality stock photo if the provided URL fails
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
-              }}
-            />
-            {/* Inner Glow Overlay */}
-            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
-          </div>
-          
-          {/* Decorative Elements - Refined */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-cyan-glow/10 rounded-full blur-[80px] -z-10 animate-pulse" />
-          <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-accent-blue/10 rounded-full blur-[100px] -z-10" />
-          
-          {/* Animated Ring */}
-          <div className="absolute inset-0 -m-4 border border-cyan-glow/20 rounded-[2.5rem] -z-10 group-hover:scale-110 transition-transform duration-700" />
-        </motion.div>
       </div>
     </section>
   );
