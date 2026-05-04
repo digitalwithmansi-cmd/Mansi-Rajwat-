@@ -24,7 +24,7 @@ export default function Hero() {
         >
           <div className="relative z-10 rounded-[2rem] overflow-hidden border-2 border-white/10 shadow-2xl transition-all duration-500 group-hover:border-cyan-glow/50 group-hover:shadow-[0_0_50px_rgba(0,229,255,0.2)] bg-[#111]">
             <img 
-              src="https://img.sanishtech.com/u/e9deb26a46dac6ff92c5c3615afbd335.png" 
+              src="https://cdn.phototourl.com/free/2026-05-04-96d1c252-a9fa-49d4-acf3-d5808b7278d0.png" 
               alt={PERSONAL_INFO.name} 
               className="w-full aspect-[4/5] object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
